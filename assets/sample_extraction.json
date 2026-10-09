@@ -1,0 +1,274 @@
+{
+  "course_code": "DSAI 150",
+  "course_title": "Foundations of Data Science",
+  "instructor": "Dr. Elena Ruiz",
+  "term": "Fall 2026",
+  "grade_categories": [
+    {
+      "name": "Homework",
+      "weight_percent": 20.0,
+      "count": 8,
+      "drop_lowest": 1
+    },
+    {
+      "name": "Quizzes",
+      "weight_percent": 10.0,
+      "count": 5,
+      "drop_lowest": null
+    },
+    {
+      "name": "Labs",
+      "weight_percent": 15.0,
+      "count": 6,
+      "drop_lowest": null
+    },
+    {
+      "name": "Midterm Exam 1",
+      "weight_percent": 15.0,
+      "count": 1,
+      "drop_lowest": null
+    },
+    {
+      "name": "Midterm Exam 2",
+      "weight_percent": 15.0,
+      "count": 1,
+      "drop_lowest": null
+    },
+    {
+      "name": "Final Project",
+      "weight_percent": 10.0,
+      "count": 1,
+      "drop_lowest": null
+    },
+    {
+      "name": "Final Exam",
+      "weight_percent": 15.0,
+      "count": 1,
+      "drop_lowest": null
+    }
+  ],
+  "events": [
+    {
+      "title": "Homework 1",
+      "event_type": "assignment",
+      "date": "2026-09-04",
+      "time": "23:59",
+      "category": "Homework",
+      "weight_percent": null,
+      "notes": "Lowest homework score is dropped, so per-item weight varies."
+    },
+    {
+      "title": "Homework 2",
+      "event_type": "assignment",
+      "date": "2026-09-18",
+      "time": "23:59",
+      "category": "Homework",
+      "weight_percent": null,
+      "notes": null
+    },
+    {
+      "title": "Homework 3",
+      "event_type": "assignment",
+      "date": "2026-10-02",
+      "time": "23:59",
+      "category": "Homework",
+      "weight_percent": null,
+      "notes": null
+    },
+    {
+      "title": "Homework 4",
+      "event_type": "assignment",
+      "date": "2026-10-16",
+      "time": "23:59",
+      "category": "Homework",
+      "weight_percent": null,
+      "notes": null
+    },
+    {
+      "title": "Homework 5",
+      "event_type": "assignment",
+      "date": "2026-10-30",
+      "time": "23:59",
+      "category": "Homework",
+      "weight_percent": null,
+      "notes": null
+    },
+    {
+      "title": "Homework 6",
+      "event_type": "assignment",
+      "date": "2026-11-13",
+      "time": "23:59",
+      "category": "Homework",
+      "weight_percent": null,
+      "notes": null
+    },
+    {
+      "title": "Homework 7",
+      "event_type": "assignment",
+      "date": "2026-11-20",
+      "time": "23:59",
+      "category": "Homework",
+      "weight_percent": null,
+      "notes": null
+    },
+    {
+      "title": "Homework 8",
+      "event_type": "assignment",
+      "date": "2026-12-04",
+      "time": "23:59",
+      "category": "Homework",
+      "weight_percent": null,
+      "notes": null
+    },
+    {
+      "title": "Quiz 1",
+      "event_type": "quiz",
+      "date": "2026-09-09",
+      "time": null,
+      "category": "Quizzes",
+      "weight_percent": 2.0,
+      "notes": null
+    },
+    {
+      "title": "Quiz 2",
+      "event_type": "quiz",
+      "date": "2026-09-30",
+      "time": null,
+      "category": "Quizzes",
+      "weight_percent": 2.0,
+      "notes": null
+    },
+    {
+      "title": "Quiz 3",
+      "event_type": "quiz",
+      "date": "2026-10-21",
+      "time": null,
+      "category": "Quizzes",
+      "weight_percent": 2.0,
+      "notes": null
+    },
+    {
+      "title": "Quiz 4",
+      "event_type": "quiz",
+      "date": "2026-11-11",
+      "time": null,
+      "category": "Quizzes",
+      "weight_percent": 2.0,
+      "notes": null
+    },
+    {
+      "title": "Quiz 5",
+      "event_type": "quiz",
+      "date": null,
+      "time": null,
+      "category": "Quizzes",
+      "weight_percent": 2.0,
+      "notes": "Date listed as TBA in Week 15 (Nov 30 - Dec 4)."
+    },
+    {
+      "title": "Lab 1",
+      "event_type": "lab",
+      "date": "2026-09-03",
+      "time": null,
+      "category": "Labs",
+      "weight_percent": 2.5,
+      "notes": null
+    },
+    {
+      "title": "Lab 2",
+      "event_type": "lab",
+      "date": "2026-09-17",
+      "time": null,
+      "category": "Labs",
+      "weight_percent": 2.5,
+      "notes": null
+    },
+    {
+      "title": "Lab 3",
+      "event_type": "lab",
+      "date": "2026-10-01",
+      "time": null,
+      "category": "Labs",
+      "weight_percent": 2.5,
+      "notes": null
+    },
+    {
+      "title": "Lab 4",
+      "event_type": "lab",
+      "date": "2026-10-15",
+      "time": null,
+      "category": "Labs",
+      "weight_percent": 2.5,
+      "notes": null
+    },
+    {
+      "title": "Lab 5",
+      "event_type": "lab",
+      "date": "2026-11-05",
+      "time": null,
+      "category": "Labs",
+      "weight_percent": 2.5,
+      "notes": null
+    },
+    {
+      "title": "Lab 6",
+      "event_type": "lab",
+      "date": "2026-11-19",
+      "time": null,
+      "category": "Labs",
+      "weight_percent": 2.5,
+      "notes": "Syllabus says 'Thursday of Week 13'; computed from the Aug 24 start date."
+    },
+    {
+      "title": "Midterm Exam 1",
+      "event_type": "exam",
+      "date": "2026-09-29",
+      "time": "19:00",
+      "category": "Midterm Exam 1",
+      "weight_percent": 15.0,
+      "notes": "Evening exam, 7:00-9:00 PM"
+    },
+    {
+      "title": "Midterm Exam 2",
+      "event_type": "exam",
+      "date": "2026-11-03",
+      "time": "19:00",
+      "category": "Midterm Exam 2",
+      "weight_percent": 15.0,
+      "notes": "Evening exam, 7:00-9:00 PM"
+    },
+    {
+      "title": "Final Project report",
+      "event_type": "project",
+      "date": "2026-12-07",
+      "time": "23:59",
+      "category": "Final Project",
+      "weight_percent": null,
+      "notes": "Report and presentation together are worth 10%."
+    },
+    {
+      "title": "Final Project presentation",
+      "event_type": "presentation",
+      "date": "2026-12-08",
+      "time": "10:20",
+      "category": "Final Project",
+      "weight_percent": null,
+      "notes": "In class"
+    },
+    {
+      "title": "Final Exam",
+      "event_type": "exam",
+      "date": "2026-12-14",
+      "time": "10:30",
+      "category": "Final Exam",
+      "weight_percent": 15.0,
+      "notes": "Cumulative, 10:30 AM-12:30 PM"
+    }
+  ],
+  "grading_scale": "A 90-100, B 80-89.99, C 70-79.99, D 60-69.99, F below 60. No curve.",
+  "warnings": [
+    "Quiz 5 date is TBA; check with the instructor.",
+    "Lab 6 date was computed from 'Thursday of Week 13'.",
+    "Late homework loses 10% per day, up to 3 days."
+  ]
+}

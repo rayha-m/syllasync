@@ -1,0 +1,25 @@
+digraph G {
+  rankdir=LR; bgcolor="white"; pad=0.5; nodesep=0.35; ranksep=0.65; splines=spline; newrank=true;
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=13, color="#7a6a63", fillcolor="#F6F3F1", margin="0.22,0.14", width=2.3];
+  edge [fontname="Helvetica", fontsize=11, color="#666666", fontcolor="#444444", penwidth=1.3];
+  labelloc="t"; label=<<b>SyllaSync — Architecture</b><br/><font point-size="12">Streamlit app on Streamlit Community Cloud · Google Gemini API</font><br/> >; fontname="Helvetica"; fontsize=20;
+
+  user  [label="Student uploads\nsyllabus PDF", shape=oval, fillcolor="#ffffff", width=1.8];
+  g1    [label=<<b>Gemini · Call 1</b><br/>reads PDF natively<br/>response_schema → JSON>, fillcolor="#e8f0fe", color="#4285F4"];
+  val   [label=<<b>Validate</b>  (core.py)<br/>Pydantic schema<br/>weights = 100%? bad dates?>];
+  edit  [label=<<b>Review &amp; edit</b><br/>student fixes any<br/>AI mistakes>];
+
+  tl    [label="Timeline +\ncrunch weeks"];
+  ics   [label="Calendar export\n.ics with reminders"];
+  calc  [label="Grade calculator\n(target − earned) ÷ remaining"];
+  g2    [label=<<b>Gemini · Call 2</b><br/>"Ask your syllabus"<br/>grounded in the JSON>, fillcolor="#e8f0fe", color="#4285F4"];
+
+  cal   [label="Google / Apple /\nOutlook Calendar", shape=oval, fillcolor="#ffffff", width=1.8];
+
+  user -> g1 [label="PDF + prompt"];
+  g1 -> val  [label="structured JSON"];
+  val -> edit;
+  edit -> tl; edit -> ics; edit -> calc; edit -> g2;
+  ics -> cal [label="import"];
+  {rank=same; tl; ics; calc; g2;}
+}

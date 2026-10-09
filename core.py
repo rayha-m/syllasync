@@ -100,7 +100,32 @@ def build_prompt(term_hint: str | None) -> str:
     return EXTRACTION_PROMPT.format(term_hint=term_hint or "unknown; infer it from the document")
 
 
-DEFAULT_MODEL = "gemini-flash-latest"
+DEFAULT_MODEL = "gemini-3.8-flash"
+
+# Tried in order if the chosen model is overloaded (503) or retired (404).
+FALLBACK_MODELS = ["gemini-3.8-flash", "gemini-3.7-flash", "gemini-flash-latest", "gemini-flash-lite-latest"]
+
+
+def _generate(client, model: str, **kwargs):
+    """Call Gemini, retrying overloaded models and falling back to others."""
+    import time
+
+    models = [model] + [m for m in FALLBACK_MODELS if m != model]
+    last_exc = None
+    for m in models:
+        for attempt in range(2):
+            try:
+                return client.models.generate_content(model=m, **kwargs)
+            except Exception as exc:  # google.genai raises APIError subclasses
+                last_exc = exc
+                msg = str(exc)
+                if "503" in msg or "UNAVAILABLE" in msg or "429" in msg:
+                    time.sleep(2 + attempt * 3)
+                    continue  # retry same model once, then move on
+                if "404" in msg or "NOT_FOUND" in msg:
+                    break  # model gone; try the next one
+                raise
+    raise last_exc
 
 
 def extract_syllabus(pdf_bytes: bytes, api_key: str, model: str = DEFAULT_MODEL, term_hint: str | None = None) -> Syllabus:
@@ -114,8 +139,9 @@ def extract_syllabus(pdf_bytes: bytes, api_key: str, model: str = DEFAULT_MODEL,
     from google.genai import types
 
     client = genai.Client(api_key=api_key)
-    response = client.models.generate_content(
-        model=model,
+    response = _generate(
+        client,
+        model,
         contents=[
             types.Part.from_bytes(data=pdf_bytes, mime_type="application/pdf"),
             build_prompt(term_hint),
@@ -142,7 +168,7 @@ def answer_question(syllabus: Syllabus, question: str, api_key: str, model: str 
         f"Today is {date.today().isoformat()}.\n\nCourse data:\n{syllabus.model_dump_json(indent=1)}\n\n"
         f"Question: {question}"
     )
-    response = client.models.generate_content(model=model, contents=prompt)
+    response = _generate(client, model, contents=prompt)
     return response.text
 
 

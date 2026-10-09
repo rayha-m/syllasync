@@ -81,10 +81,9 @@ class Syllabus(BaseModel):
 
 ## Part 2: Prompts used while building
 
-<!-- Rayha: log your real development prompts here, in order, with the tool you used. -->
-
-| # | Tool | Prompt (summary or verbatim) | What it produced |
-|---|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+   | # | Tool | Prompt (summary) | What it produced |
+   |---|---|---|---|
+   | 1 | Claude | "Help me pick a hackathon idea that uses the Gemini API and fits the judging criteria" | The Syllabus → Semester Planner idea and tool choices (Gemini, Streamlit) |
+   | 2 | Claude | "Build the app: Gemini PDF extraction with a JSON schema, .ics export, grade calculator" | app.py, core.py, tests, docs, architecture diagram, slides |
+   | 3 | Claude | Pasted Gemini errors (503 high demand, 404 retired model) and asked for a fix | Retry and model-fallback logic in core.py |
+   | 4 | Google Gemini API | The extraction and Q&A prompts in Part 1 | The structured syllabus data the app runs on |

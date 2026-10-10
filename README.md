@@ -2,6 +2,8 @@
 
 **Drop in any syllabus PDF. Gemini turns it into a synced calendar, a weighted grade tracker, and a "what do I need on the final?" calculator.**
 
+**Live app:** https://syllasyncapp.streamlit.app
+
 Built for *Prompt2Product: MLH Hack Day @ AITR* by Rayha Manam.
 
 ![SyllaSync cover](assets/cover.png)
@@ -34,7 +36,7 @@ $$s_{\text{needed}} = \frac{G_{\text{target}} - \sum_{\text{graded}} w_i s_i}{\s
 ## Run it locally
 
 ```bash
-git clone https://github.com/<your-username>/syllasync.git
+git clone https://github.com/rayha-m/syllasync.git
 cd syllasync
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
